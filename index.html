@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<head>
+	<script src="/assets/jquery.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<title>food szn</title>
+<style>
+    body {
+      font-family: helvetica, sans serif;
+      margin:0 auto;
+      max-width: 600px;
+      background-color: white;
+	}
+
+
+	div {
+		height: 200px;
+		position: relative;
+        background-size: cover;
+        margin: 40px 0 0 0;
+        border-radius: 12px;
+		
+	} 
+
+	 p {
+        color: rgba(255, 255, 255, 1);
+        background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+        background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+        padding: 10px;
+
+        line-height: 30px;
+        text-align: justify;
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        text-align: justify;
+        transition: height .5s;
+        -webkit-transition: height .5s;
+        -moz-transition: height .5s;
+
+  } 
+    
+    small {
+        opacity: 0;
+  }
+.show-description p {
+  height: 150px;
+  }
+
+.show-description small {
+  opacity: 1;
+  }
+
+
+    h1 {
+
+    	font-family: 'Pacifico', cursive;
+    	font-size: 75px;
+    	text-align: center;
+    	margin: 60px 0 0 0;
+    	background-color: #FFFF66
+    }
+
+     h2 {
+        text-align: center;
+        margin: 0px 0 70px 0;
+        background-color: #FFFFCC
+
+   }
+
+    .price {
+        float: right;
+    }
+
+	.one {
+		background: url("https://images.unsplash.com/photo-1428259067396-2d6bd3827878?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80");
+		
+		background-repeat: no-repeat;
+        background-size: auto;
+	}
+	.two {
+		background: url("https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+		background-size: cover;
+	}
+	.three {
+		background: url("https://images.unsplash.com/photo-1522666257812-173fdc2d11fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80");
+		background-size: cover;
+	}
+	.four {
+		background: url("https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80");
+		background-size: cover;
+	
+	
+	}
+
+ @media (max-width: 500px) {
+    h1 {
+      font-size: 50px;
+      margin-top: 20px;
+      line-height: 40px;
+
+    h2 {
+      font-size: 20px;
+      margin: 20px 0 30px 0;
+     }
+     
+    div {
+      margin: 20px 12px 0 12px; 
+    }
+ }	p {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    small {
+      font-size: 16px;
+    }
+</style>
+
+</head>
+
+<body>
+<h1>food szn</h1>
+<h2>...meals that delight your soul</h2>
+
+<div class="one">
+  <p>grilled meat with vegetable toppings<span class="price"> #2,500</span><br /> <small>Cooked on a grill, this steak is topped with fresh vegetables, cheese and ground beef flavored with steak sauce. The crust is made with frozen pizza dough.</small>
+  </p>
+</div>
+<div class="two">
+  <p>fruit salad with yoghurt <span class="price">#1,800</span><br />
+  <small>Creamy Yogurt Fruit Salad is a delicious alternative to a sweet dessert! Packed with lots of fruit, greek yogurt and honey, this salad will not disappoint!</small>
+  </p>
+</div>
+<div class="three">
+  <p>rolled pasta with vegetables - <span class="price">#2,000</span><br />
+  <small>In this awesome riff on traditional lasagna, ricotta, Parmesan and a blend of three cheeses are rolled up in the pasta and baked until delicious.</small>
+  	</p>
+</div>
+<div class="four">
+  <p>ground pork and sliced tomatoes - <span class="price">#2,800</span><br />
+  <small>This delightful meal is enriched with fatty pork belly and laced with toasted dried chiles in this addictive dip.</small>
+  </p>
+</div>
+
+<script>
+   $('div').on('click', function() {
+    $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
